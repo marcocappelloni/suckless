@@ -70,7 +70,7 @@ static const struct arg args[] = {
   { disk_perc,        "^c#0087BD^ROOT: %s%% ^c#EEEEEE^| ",     "/"},
   { disk_perc,        "^c#CDD6F4^HOME: %s%% ^c#EEEEEE^| ",     "/home"},
   { ram_perc,         "^c#0087BD^RAM: %s%% ^c#EEEEEE^| ",      NULL},
-  { wifi_perc,        "^c#CDD6F4^WIFI: %s%% ^c#EEEEEE^| ",     "wlp4s0"},
+  //{ wifi_perc,        "^c#CDD6F4^WIFI: %s%% ^c#EEEEEE^| ",     "wlp4s0"},
   //{ run_command,      "^c#B48FAC^VOL: %s ^c#EEEEEE^| ",        "amixer get Master | tail -1 | awk '{print $5}' | tr -d '[]'"},
 	{ datetime,         "^c#f9f871^ %s ^c#EEEEEE^",    "%a %d %b %R" },
 };
