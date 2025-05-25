@@ -19,7 +19,7 @@ super + F2
 #	firefox
 
 #File manager
-super + F4
+super + F3
     pcmanfm
 
 #Working hours
@@ -64,8 +64,8 @@ super + 0
 #################################################################
 
 #Run launcher
-super + shift + Return
-    rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/qtile/rofi/launcher2.rasi
+#super + shift + Return
+#    rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/qtile/rofi/launcher2.rasi
 
 #dmenu
 #super + shift + d

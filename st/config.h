@@ -8,7 +8,7 @@
  */
 static char *font = "Liberation Mono:size=11:antialias=true:autohint=true";
 //static char *font = "JetBrainsMono Nerd Font:size=10:antialias=true:autohint=true";
-static int borderpx = 0;
+static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:

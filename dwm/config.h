@@ -72,12 +72,14 @@ static char linenumberdmenu[] = "15";
 /*static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
 static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-l", linenumberdmenu, NULL };
 //static const char *termcmd[]      = { "kitty", NULL };
-static const char *termcmd[]      = { "st", NULL };
+static const char *termcmd[]      = { "kitty", NULL };
+static const char *termcmd2[]      = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY|ShiftMask,             XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } },
 	//{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
 	//{ MODKEY,                       XK_F1,     spawn,          {.v = browsercmd } },
 	//{ MODKEY|ShiftMask,             XK_0,      spawn,          {.v = powermenucmd } },
