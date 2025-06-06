@@ -30,6 +30,11 @@ super + F5
 super + F6
     thunderbird
 
+# Keybindings
+super + F9
+    keybindings
+
+
 #################################################################
 # SUPER + ... KEYS
 #################################################################
@@ -92,14 +97,13 @@ super + shift + F3
 super + shift + c
     clock
 
-#reload sxhkd:
-super + shift + s
-	pkill -USR1 -x sxhkd
-
 #Select and open config file
 super + shift + h
   listconfigs
 
+# Simple todo list with dmenu
+super + shift + t
+  todomenu
 
 # Restart sxhkd hotkey daemon
 super + shift + x
