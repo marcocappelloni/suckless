@@ -1,0 +1,50 @@
+diff -up ../dwm-vanilla/config.def.h ./config.def.h
+--- ../dwm-vanilla/config.def.h	2022-02-10 19:17:09.176330559 -0500
++++ ./config.def.h	2022-02-10 19:20:33.717417488 -0500
+@@ -16,6 +16,9 @@ static const char *colors[][3]      = {
+ 	/*               fg         bg         border   */
+ 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+ 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
++	[SchemeStatus]    = { col_gray4, col_gray1, NULL }, /* border is unused */
++	[SchemeTitleNorm] = { col_gray3, col_gray1, NULL }, /* border is unused */
++	[SchemeTitleSel]  = { col_gray4, col_cyan, NULL }, /* border is unused */
+ };
+ 
+ /* tagging */
+diff -up ../dwm-vanilla/dwm.c ./dwm.c
+--- ../dwm-vanilla/dwm.c	2022-02-10 19:17:09.176330559 -0500
++++ ./dwm.c	2022-02-10 19:27:26.019606779 -0500
+@@ -59,7 +59,7 @@
+ 
+ /* enums */
+ enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
+-enum { SchemeNorm, SchemeSel }; /* color schemes */
++enum { SchemeNorm, SchemeSel, SchemeStatus, SchemeTitleNorm, SchemeTitleSel }; /* color schemes */
+ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
+        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
+@@ -707,7 +707,7 @@ drawbar(Monitor *m)
+ 
+ 	/* draw status first so it can be overdrawn by tags later */
+ 	if (m == selmon) { /* status is only drawn on selected monitor */
+-		drw_setscheme(drw, scheme[SchemeNorm]);
++		drw_setscheme(drw, scheme[SchemeStatus]);
+ 		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
+ 		drw_text(drw, m->ww - tw, 0, tw, bh, 0, stext, 0);
+ 	}
+@@ -734,12 +734,12 @@ drawbar(Monitor *m)
+ 
+ 	if ((w = m->ww - tw - x) > bh) {
+ 		if (m->sel) {
+-			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
++			drw_setscheme(drw, scheme[m == selmon ? SchemeTitleSel : SchemeTitleNorm]);
+ 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
+ 			if (m->sel->isfloating)
+ 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
+ 		} else {
+-			drw_setscheme(drw, scheme[SchemeNorm]);
++			drw_setscheme(drw, scheme[SchemeTitleNorm]);
+ 			drw_rect(drw, x, 0, w, bh, 1, 1);
+ 		}
+ 	}
+Only in .: dwm-morecolors-1.diff

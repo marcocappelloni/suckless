@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include "themes/nimona.h"
+
 /* interval between updates (in ms) */
 const unsigned int interval = 30000;
 
@@ -66,11 +68,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function         format              argument */
-  { cpu_perc,         "^c#CDD6F4^CPU: %s%% ^c#EEEEEE^| ",      NULL},
-  { disk_perc,        "^c#0087BD^ROOT: %s%% ^c#EEEEEE^| ",     "/"},
-  { disk_perc,        "^c#CDD6F4^HOME: %s%% ^c#EEEEEE^| ",     "/home"},
-  { ram_perc,         "^c#0087BD^RAM: %s%% ^c#EEEEEE^| ",      NULL},
+  { cpu_perc,         "^c" COLOR_FG_1 "^ CPU: %s%% ^c" COLOR_SEP_1 "^| ",      NULL},
+  { disk_perc,        "^c" COLOR_FG_2 "^ROOT: %s%% ^c" COLOR_SEP_1 "^| ",     "/"},
+  { disk_perc,        "^c" COLOR_FG_1 "^HOME: %s%% ^c" COLOR_SEP_1 "^| ",     "/home"},
+  { ram_perc,         "^c" COLOR_FG_2 "^RAM: %s%% ^c" COLOR_SEP_1 "^| ",      NULL},
   //{ wifi_perc,        "^c#CDD6F4^WIFI: %s%% ^c#EEEEEE^| ",     "wlp4s0"},
   //{ run_command,      "^c#B48FAC^VOL: %s ^c#EEEEEE^| ",        "amixer get Master | tail -1 | awk '{print $5}' | tr -d '[]'"},
-	{ datetime,         "^c#f9f871^ %s ^c#EEEEEE^",    "%a %d %b %R" },
+	{ datetime,         "^c" COLOR_FG_3 "^ %s ^c" COLOR_SEP_1 "^",    "%a %d %b %R" },
 };
