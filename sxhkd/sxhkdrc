@@ -86,7 +86,8 @@ super + shift + F1
 
 #Ranger file manager
 super + shift + F3
-    kitty -e yazi
+    ghostty -e yazi
+    #kitty -e yazi
     #alacritty --class ranger -e ranger
 
 #Kill focused window

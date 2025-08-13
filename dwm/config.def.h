@@ -75,8 +75,9 @@ static char linenumberdmenu[] = "15";
 /*static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
 static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-l", linenumberdmenu, NULL };
 //static const char *termcmd[]      = { "kitty", NULL };
-static const char *termcmd[]      = { "kitty", NULL };
-static const char *termcmd2[]      = { "st", NULL };
+static const char *termcmd[]      = { "ghostty", NULL };
+static const char *termcmd2[]      = { "kitty", NULL };
+static const char *termcmd3[]      = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
