@@ -74,5 +74,8 @@ static const struct arg args[] = {
   { ram_perc,         "^c" COLOR_FG_2 "^RAM: %s%% ^c" COLOR_SEP_1 "^| ",      NULL},
   //{ wifi_perc,        "^c#CDD6F4^WIFI: %s%% ^c#EEEEEE^| ",     "wlp4s0"},
   //{ run_command,      "^c#B48FAC^VOL: %s ^c#EEEEEE^| ",        "amixer get Master | tail -1 | awk '{print $5}' | tr -d '[]'"},
-	{ datetime,         "^c" COLOR_FG_3 "^ %s ^c" COLOR_SEP_1 "^",    "%a %d %b %R" },
+	{ datetime,         "^c" COLOR_FG_3 "^ %s ^c" COLOR_SEP_1 "^| ",    "%a %d %b %R" },
+  { run_command, "%s ",       "kb_capacity"    },
+  { run_command, "%s ",       "kb_status"      },
+  { run_command, "%s",        "kb_status_icon" },
 };
