@@ -14,10 +14,6 @@ super + F1
 super + F2
 	chromium
 
-# Third manager
-#super + F3
-#	firefox
-
 #File manager
 super + F3
     pcmanfm
@@ -28,7 +24,7 @@ super + F5
 
 #Mail client
 super + F6
-    thunderbird
+    evolution
 
 # Keybindings
 super + F9
@@ -39,17 +35,17 @@ super + F9
 # SUPER + ... KEYS
 #################################################################
 
-#Atom
+# Passwords
 super + p
     passmenu -l 15
 
-#Browser
+# Windows opened
 super + w
     rofi -show window -show-icons
 
-#dmenu
+# Apps launcher
 super + d
-    rofi -show drun -show-icons -monitor -1
+    rofi -show drun -show-icons -monitor 1
 
 #Terminal
 #super + Return
@@ -59,7 +55,7 @@ super + d
 super + c
     gsimplecal
 
-#Power menu
+# Power menu
 super + 0
     powermenu
 
@@ -68,39 +64,27 @@ super + 0
 # SUPER + SHIFT KEYS
 #################################################################
 
-#Run launcher
-#super + shift + Return
-#    rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/qtile/rofi/launcher2.rasi
-
-#dmenu
-#super + shift + d
-#	  dmenu_run -i -l 10  -fn 'NotoMonoRegular:bold:pixelsize=14'
-
-#Pass gui app
-super + shift + p
-    qtpass
-
-#Brave private window
+# Brave private window
 super + shift + F1
     brave --incognito
 
-#Ranger file manager
+# Yazi file manager
 super + shift + F3
     kitty -e yazi
     #ghostty -e yazi
     #alacritty --class ranger -e ranger
 
-#Kill focused window
-#super + shift + c
-#    xkill
-
-#Rofi Clock
+# Rofi Clock
 super + shift + c
     clock
 
-#Select and open config file
+# Select and open config files
 super + shift + h
   listconfigs
+
+# Passwords gui app
+super + shift + p
+    qtpass
 
 # Simple todo list with dmenu
 super + shift + t
@@ -164,25 +148,13 @@ super + ctrl + h
 Print
   flameshot gui
 
-#Scrot
-#Print
-#    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-
-#screeenshooter
-#ctrl + Print
-#     xfce4-screenshooter
-
-#Gnome-Screenshot
-#ctrl + shift + Print
-#     gnome-screenshot -i
-
 
 #################################################################
 #     FUNCTION KEYS
 #################################################################
 
 #xfce4-terminal dropdown
-#F12
+# F12
 #    xfce4-terminal --drop-down
 
 
@@ -200,7 +172,7 @@ XF86AudioLowerVolume
 
 #Mute
 XF86AudioMute
-    amixer -D pulse set Master 1+ toggle
+    amixer set Master 1+ toggle
 
 
 #PLAY

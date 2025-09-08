@@ -30,6 +30,9 @@ static const char *colors[][3]      = {
 	[SchemeInfoNorm]  = { info_norm_fg, info_norm_bg,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
+/* staticstatus */
+static const int statmonval = 0;
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
